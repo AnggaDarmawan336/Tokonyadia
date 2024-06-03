@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/wallets")
+@RequestMapping("api/v1/wallets")
 @AllArgsConstructor
 public class WalletController {
     private final WalletService wallet_service;

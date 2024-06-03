@@ -8,7 +8,9 @@ import com.example.tokonyadia.repository.WalletRepository;
 import com.example.tokonyadia.service.CustomerService;
 import com.example.tokonyadia.service.WalletService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -41,7 +43,11 @@ public class WalletServiceImpl implements WalletService {
     @Override
     public WalletResponse create(WalletRequest request) {
         String customer_id = request.getCustomer_id();
+        if (customer_id == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Customer not found");
+        }
         Customer customer = customer_service.get_by_id(customer_id);
+
 //        Wallet wallet = new Wallet();
 //        wallet.setCustomer(customer);
 //        wallet.setBalance(request.getBalance());
