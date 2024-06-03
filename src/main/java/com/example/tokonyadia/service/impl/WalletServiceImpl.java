@@ -1,5 +1,7 @@
 package com.example.tokonyadia.service.impl;
 
+import com.example.tokonyadia.dto.request.WalletRequest;
+import com.example.tokonyadia.dto.response.WalletResponse;
 import com.example.tokonyadia.entity.Customer;
 import com.example.tokonyadia.entity.Wallet;
 import com.example.tokonyadia.repository.WalletRepository;
@@ -37,11 +39,16 @@ public class WalletServiceImpl implements WalletService {
     //    private final String abc = "abc";
 
     @Override
-    public Wallet create(Wallet request) {
-        String customer_id = request.getCustomer().getId();
+    public WalletResponse create(WalletRequest request) {
+        String customer_id = request.getCustomer_id();
         Customer customer = customer_service.get_by_id(customer_id);
-        request.setCustomer(customer);
-        return wallet_repository.saveAndFlush(request);
+//        Wallet wallet = new Wallet();
+//        wallet.setCustomer(customer);
+//        wallet.setBalance(request.getBalance());
+        Wallet wallet = Wallet.builder().balance(request.getBalance()).customer(customer).build();
+        Wallet createdWallet = wallet_repository.saveAndFlush(wallet);
+        // alternativenya modelMapper
+        return WalletResponse.builder().id(createdWallet.getId()).balance(createdWallet.getBalance()).customer_id(customer_id).build();
     }
 
     @Override
