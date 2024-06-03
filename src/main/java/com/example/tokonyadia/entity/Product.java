@@ -1,4 +1,4 @@
-package com.example.tokonyadia.model;
+package com.example.tokonyadia.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

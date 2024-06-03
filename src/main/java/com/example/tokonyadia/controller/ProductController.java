@@ -1,6 +1,6 @@
 package com.example.tokonyadia.controller;
 
-import com.example.tokonyadia.model.Product;
+import com.example.tokonyadia.entity.Product;
 import com.example.tokonyadia.service.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

@@ -1,6 +1,6 @@
 package com.example.tokonyadia.controller;
 
-import com.example.tokonyadia.model.Wallet;
+import com.example.tokonyadia.entity.Wallet;
 import com.example.tokonyadia.service.WalletService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.*;
 public class WalletController {
     private final WalletService wallet_service;
 
-    @PostMapping("/{customer_id}")
+    @PostMapping
     public Wallet create_wallet(
-            @RequestBody Wallet request,
-            @PathVariable String customer_id
+            @RequestBody Wallet request
     ) {
-        return wallet_service.create(request, customer_id);
+        return wallet_service.create(request);
     }
 }

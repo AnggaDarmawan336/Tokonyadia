@@ -1,12 +1,10 @@
 package com.example.tokonyadia.service.impl;
 
-import com.example.tokonyadia.model.Product;
+import com.example.tokonyadia.entity.Product;
 import com.example.tokonyadia.repository.ProductRepository;
 import com.example.tokonyadia.service.ProductService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;

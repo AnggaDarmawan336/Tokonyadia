@@ -1,8 +1,8 @@
 package com.example.tokonyadia.service.impl;
 
-import com.example.tokonyadia.model.Product;
-import com.example.tokonyadia.model.Transaction;
-import com.example.tokonyadia.model.Wallet;
+import com.example.tokonyadia.entity.Product;
+import com.example.tokonyadia.entity.Transaction;
+import com.example.tokonyadia.entity.Wallet;
 import com.example.tokonyadia.repository.TransactionRepository;
 import com.example.tokonyadia.service.ProductService;
 import com.example.tokonyadia.service.TransactionService;

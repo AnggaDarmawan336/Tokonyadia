@@ -1,6 +1,6 @@
 package com.example.tokonyadia.service;
 
-import com.example.tokonyadia.model.Product;
+import com.example.tokonyadia.entity.Product;
 
 import java.util.List;
 

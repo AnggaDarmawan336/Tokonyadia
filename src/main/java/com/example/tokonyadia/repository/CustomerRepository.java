@@ -1,6 +1,6 @@
 package com.example.tokonyadia.repository;
 
-import com.example.tokonyadia.model.Customer;
+import com.example.tokonyadia.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

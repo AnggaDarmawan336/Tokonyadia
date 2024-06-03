@@ -1,4 +1,4 @@
-package com.example.tokonyadia.model;
+package com.example.tokonyadia.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -20,6 +20,7 @@ public class Customer {
     private String email;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Wallet> wallet_list;
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)

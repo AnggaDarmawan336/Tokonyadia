@@ -1,4 +1,4 @@
-package com.example.tokonyadia.model;
+package com.example.tokonyadia.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

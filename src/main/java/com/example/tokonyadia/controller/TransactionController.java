@@ -1,7 +1,7 @@
 package com.example.tokonyadia.controller;
 
 
-import com.example.tokonyadia.model.Transaction;
+import com.example.tokonyadia.entity.Transaction;
 import com.example.tokonyadia.service.TransactionService;
 import com.example.tokonyadia.utils.response.WebResponse;
 import lombok.AllArgsConstructor;

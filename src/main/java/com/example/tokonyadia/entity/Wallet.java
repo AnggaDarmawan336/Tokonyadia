@@ -1,6 +1,5 @@
-package com.example.tokonyadia.model;
+package com.example.tokonyadia.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,6 +20,5 @@ public class Wallet {
 
     @ManyToOne
     @JoinColumn(name="customer_id",nullable=false)
-    @JsonIgnore
     private Customer customer;
 }

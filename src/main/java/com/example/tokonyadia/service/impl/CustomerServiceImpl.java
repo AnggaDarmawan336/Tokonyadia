@@ -1,12 +1,10 @@
 package com.example.tokonyadia.service.impl;
 
-import com.example.tokonyadia.model.Customer;
+import com.example.tokonyadia.entity.Customer;
 import com.example.tokonyadia.repository.CustomerRepository;
 import com.example.tokonyadia.service.CustomerService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
