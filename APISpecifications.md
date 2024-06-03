@@ -35,6 +35,8 @@ GET customers?offset=10&limit=10 (BE) -> equal page 2
 
 api/v1/customers/customerId/wallets
 
+GET customers?offset=0&limit=10
+
 **Create a new customer**
 - **Method** `POST`
 - **Endpoint** `api/v1/customers`

@@ -4,9 +4,11 @@ import com.example.tokonyadia.entity.Customer;
 import com.example.tokonyadia.repository.CustomerRepository;
 import com.example.tokonyadia.service.CustomerService;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -21,8 +23,10 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public List<Customer> get_all() {
-        return customer_repository.findAll();
+    public Page<Customer> get_all(Integer offset, Integer limit) {
+//        if (offset != null && limit != null) {
+            return customer_repository.findAll(PageRequest.of(0, 1, Sort.by(Sort.Direction.ASC, "name")));
+//        }
     }
 
     @Override

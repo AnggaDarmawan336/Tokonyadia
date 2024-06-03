@@ -3,6 +3,7 @@ package com.example.tokonyadia.controller;
 import com.example.tokonyadia.entity.Customer;
 import com.example.tokonyadia.service.CustomerService;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,8 +20,10 @@ public class CustomerController {
     }
 
     @GetMapping
-    public List<Customer> get_all() {
-        return customer_service.get_all();
+
+    public Page<Customer> get_all(@RequestParam(defaultValue="0", required = false) Integer offset,
+                                  @RequestParam(defaultValue="10", required = false) Integer limit) {
+        return customer_service.get_all(offset, limit);
     }
 
     @GetMapping(path = "/{id}")
